@@ -1,0 +1,270 @@
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 62.5%;
+}
+
+body{
+    width: 90%;
+}
+
+form {
+    font-size: 2rem;
+}
+
+.NamePaciente .namePaciente-input{
+    width: 30rem;
+    height: auto;
+}
+
+.pacienteId .documentoN-input{
+    width: 23rem;
+    height: auto;
+}
+
+.fechaAccidente .mesAccidente{
+    width: 14rem;
+    height: auto;
+}
+
+.aseguradoraID .soat{
+    width: 50rem;
+    height: auto;
+}
+
+.gastoId .totalGasto{
+    width: 22rem;
+    height: auto;
+}
+
+.fechaCarta .cartaMes{
+    width: 14rem;
+    height: auto;
+}
+
+.tiNota .nameServicio-Input{
+    width: 29rem;
+    height: auto;
+}
+
+main {
+    width: 100%;
+    height: 104rem;
+    padding: auto;
+    justify-items: center;
+    align-items: center;
+    margin: 0rem 3rem;
+}
+
+main section .Parrafo1{
+    width: 100%;
+    margin: 0% auto;
+    font-size: 2.5rem;
+    justify-content: center;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 35px;
+}
+
+main .main-input-name {
+    width: 100%;
+    height: 6rem;
+    margin-bottom: 35px;
+    font-size: 2.5rem;
+    text-align: justify;
+    display: flex; 
+}
+
+main .main-input-accidente {
+    width: 100%;
+    height: 8rem;
+    margin-bottom: 35px;
+    font-size: 2.5rem;
+    text-align: justify;
+    display: flex;
+}
+
+main .main-input-gastos {
+    width: 100%;
+    margin-bottom: 35px;
+    font-size: 2.5rem;
+    text-align: justify;
+    display: flex;
+}
+
+main .main-input-nota {
+    width: 100%;
+    height: 20rem;
+    margin-bottom: 35px;
+    font-size: 2.5rem;
+    text-align: justify;
+    display: flex;
+}
+
+main .main-input-ips {
+    width: 100%;
+    margin-bottom: 35px;
+    font-size: 2.5rem;
+    text-align: justify;
+    display: flex;
+}
+
+main .main-input-carta {
+    width: 100%;
+    height: 18rem;
+    margin-bottom: 35px;
+    font-size: 2.5rem;
+    text-align: justify;
+    display: flex;
+}
+
+main .main-input-funcionario {
+    width: 100%;
+    height: 16rem;
+    margin-bottom: 35px;
+    font-size: 2.5rem;
+    text-align: left;
+    display: flex;
+}
+
+.fechaCarta input {
+    display: inline-block;
+}
+
+button{
+    display: flex;
+    margin: 1rem 3rem;
+    width: auto;
+    height: 36px;
+    background-color: #f2f2f2;
+    border: 0;
+    font-size: 2rem;
+    color: #5f6368;
+    border-radius: 5px;
+    padding: 0 15px;
+    margin-right: 15px;
+    box-shadow: 0 1px 1px #000001;
+    cursor: pointer;
+}
+
+h1{
+    margin: 1rem 3rem;
+}
+
+label{
+    font-size: 1.6rem;
+    display: flex;
+    margin: 1rem 3rem;
+}
+
+input{
+    font-size: 1.6rem;
+    background-color: gainsboro;
+    color: black;
+    margin-right: 10PX;
+    box-shadow: 0 1px 6px 0 #20212447;
+    border-color: #dfe1e500;
+}
+
+form .NamePaciente{
+    display: flex;
+}
+
+form .identificacionID{
+    display: flex;
+}
+
+.pacienteId .pacienteId-input{
+    width: 6rem;
+    height: auto;
+}
+
+form .fechaAccidente{
+    display: flex;
+}
+
+form .fechaAccidente .fechaAccidente-diaInput{
+    width: 6rem;
+    height: auto;
+}
+
+.fechaAccidente .AnnioAccidente{
+    width: 8rem;
+    height: auto;
+}
+
+section .aseguradoraID{
+    display: flex;
+}
+
+section .gastoId{
+    display: flex;
+}
+
+form .fechaCarta{
+    display: flex;
+}
+
+#CartaGasto{
+    width: 100%;
+    height: 50rem;
+}
+
+.cartaId {
+    width: 51rem;
+}
+
+.datosCarta .cartaId-input{
+    display: inline-block;
+    min-width: 100px;
+    width: 100%;
+    height: 8rem;
+    vertical-align: text;
+    display: inline-block;
+    justify-content: center;
+    justify-items: center;
+}
+
+section .fechaCarta .cartaDia{
+    width: 6rem;
+    height: auto;
+}
+
+.fechaCarta .annioCarta{
+    width: 8rem;
+    height: auto;
+}
+
+#CartaGasto section{
+    width: auto;
+    height: auto;
+}
+
+.main-input-funcionario .input.funcionaro{
+    display: flex;
+}
+
+footer {
+    width: 100%;
+    position: absolute;
+    padding: 0;
+}
+
+.funcionario .funcionario-input{
+    width: 30rem;
+    height: auto;
+}
+
+
+
+
+
+
+@media print {
+#CartaGasto {display:none;}
+}
