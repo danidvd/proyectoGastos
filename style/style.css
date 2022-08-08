@@ -9,8 +9,7 @@ html {
     font-size: 62.5%;
 }
 
-
-body {
+body{
     width: 90%;
 }
 
@@ -18,12 +17,48 @@ form {
     font-size: 2rem;
 }
 
+.NamePaciente .namePaciente-input{
+    width: 30rem;
+    height: auto;
+}
+
+.pacienteId .documentoN-input{
+    width: 23rem;
+    height: auto;
+}
+
+.fechaAccidente .mesAccidente{
+    width: 14rem;
+    height: auto;
+}
+
+.aseguradoraID .soat{
+    width: 50rem;
+    height: auto;
+}
+
+.gastoId .totalGasto{
+    width: 22rem;
+    height: auto;
+}
+
+.fechaCarta .cartaMes{
+    width: 14rem;
+    height: auto;
+}
+
+.tiNota .nameServicio-Input{
+    width: 29rem;
+    height: auto;
+}
+
 main {
     width: 100%;
-    height: 102rem;
-    padding: 50px;
+    height: 104rem;
+    padding: auto;
     justify-items: center;
     align-items: center;
+    margin: 0rem 3rem;
 }
 
 main section .Parrafo1{
@@ -64,7 +99,7 @@ main .main-input-gastos {
 
 main .main-input-nota {
     width: 100%;
-    height: 17rem;
+    height: 20rem;
     margin-bottom: 35px;
     font-size: 2.5rem;
     text-align: justify;
@@ -81,7 +116,7 @@ main .main-input-ips {
 
 main .main-input-carta {
     width: 100%;
-    height: 14rem;
+    height: 18rem;
     margin-bottom: 35px;
     font-size: 2.5rem;
     text-align: justify;
@@ -90,7 +125,7 @@ main .main-input-carta {
 
 main .main-input-funcionario {
     width: 100%;
-    height: 6rem;
+    height: 16rem;
     margin-bottom: 35px;
     font-size: 2.5rem;
     text-align: left;
@@ -144,8 +179,8 @@ form .identificacionID{
     display: flex;
 }
 
-form .identificacionID .pacienteId-input{
-    width: 8rem;
+.pacienteId .pacienteId-input{
+    width: 6rem;
     height: auto;
 }
 
@@ -154,6 +189,11 @@ form .fechaAccidente{
 }
 
 form .fechaAccidente .fechaAccidente-diaInput{
+    width: 6rem;
+    height: auto;
+}
+
+.fechaAccidente .AnnioAccidente{
     width: 8rem;
     height: auto;
 }
@@ -175,10 +215,14 @@ form .fechaCarta{
     height: 50rem;
 }
 
+.cartaId {
+    width: 51rem;
+}
+
 .datosCarta .cartaId-input{
     display: inline-block;
     min-width: 100px;
-    width: 80rem;
+    width: 100%;
     height: 8rem;
     vertical-align: text;
     display: inline-block;
@@ -187,6 +231,11 @@ form .fechaCarta{
 }
 
 section .fechaCarta .cartaDia{
+    width: 6rem;
+    height: auto;
+}
+
+.fechaCarta .annioCarta{
     width: 8rem;
     height: auto;
 }
@@ -196,7 +245,20 @@ section .fechaCarta .cartaDia{
     height: auto;
 }
 
+.main-input-funcionario .input.funcionaro{
+    display: flex;
+}
 
+footer {
+    width: 100%;
+    position: absolute;
+    padding: 0;
+}
+
+.funcionario .funcionario-input{
+    width: 30rem;
+    height: auto;
+}
 
 
 

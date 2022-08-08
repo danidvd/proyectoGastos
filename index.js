@@ -49,6 +49,21 @@ function onclickSumarNombre(){
     var cartaAnnioInput = document.getElementById("InputCartaAnnio");
     var CartaAnnio = cartaAnnioInput.value;
 
+    //Funcionario
+
+    var funcionarioInput = document.getElementById("InputFuncionario");
+    var funcionaro = funcionarioInput.value;
+    var nombreEmpleados = mostrarNombreUsuario(funcionaro);
+    var nombreCargo = mostrarNombreCargo(funcionaro);
+    var nombreCorreo = mostrarNombreCorreo(funcionaro);
+
+    //Motivo
+
+    var motivoCartaInput = document.getElementById("motivo-Input");
+    var motivoCarta = motivoCartaInput.value;
+    var queMotivoCarta = mostrarMotivo(motivoCarta);
+    var CualMotivoCarta = mostrarMotivoFinal(motivoCarta);
+
     // Se Muestran los cambios en la carta Parrafo1
     var ResultadoNombre = document.getElementById("ResultadoNombre");
     ResultadoNombre.innerText = NameUser  + " identificado con " + tipoIdentificacion + " " + documentoPacienteCompleto + " ingresó a esta institución tras sufrir un accidente de tránsito.";
@@ -60,10 +75,45 @@ function onclickSumarNombre(){
     ResultadoGasto.innerText = "$ " + gastoTotal;
 
     var ResultadoCarta = document.getElementById("ResultadoCarta");
-    ResultadoCarta.innerText = "Esta constancia se realiza a solicitud del usuario y se firma en la ciudad de Medellin a los " + cartaDia + " dias del mes de " + cartaMes + " de " + CartaAnnio;
+    ResultadoCarta.innerText = "Esta constancia se realiza a solicitud del usuario y se firma en la ciudad de Medellín a los " + cartaDia + " días del mes de " + cartaMes + " de " + CartaAnnio;
 
     var ResultadoNota = document.getElementById("ResultadoNota");
-    ResultadoNota.innerText = "NOTA: " + nota;
+    ResultadoNota.innerText = CualMotivoCarta;
+
+    var ResultadoEmpleado = document.getElementById("ResultadoEmpleado");
+    ResultadoEmpleado.innerText = nombreEmpleados;
+
+    var ResultadoCargo = document.getElementById("ResultadoCargo");
+    ResultadoCargo.innerText = nombreCargo;
+
+    var ResultadoCorreo = document.getElementById("ResultadoCorreo");
+    ResultadoCorreo.innerText = nombreCorreo;
+
+    function mostrarMotivoFinal(motivo){
+        var servicioInput = document.getElementById("inputServicio");
+        var servicio = servicioInput.value;
+        if(motivo === motivo1){
+            return "NOTA: " + "Paciente solicita corte de cuenta para " + servicio + queMotivoCarta
+        }
+        if(motivo === motivo2){
+            return "NOTA: " + "Paciente solicita corte de cuenta para " + servicio + queMotivoCarta
+        }
+        if(motivo === motivo3){
+            return "NOTA: " + "Paciente solicita corte de cuenta para " + servicio + queMotivoCarta
+        }
+        if(motivo === motivo4){
+            return "NOTA: " + queMotivoCarta
+        }
+        if(motivo === motivo5){
+            return "NOTA: " + queMotivoCarta
+        }
+        if(motivo === motivo6){
+            return "NOTA: " + queMotivoCarta
+        }
+        if(motivo === motivo7){
+            return "NOTA: " + nota;
+        }
+    }
 }
 
 const formatoMexico = (number) => {
@@ -81,3 +131,6 @@ const formatoMexico = (number) => {
         w.print();
         w.close();
             return true;}
+
+
+

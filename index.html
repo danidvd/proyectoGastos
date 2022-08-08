@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prototipo Carta Gastos</title>
     <link rel="stylesheet" href="./style/style.css">
+
 </head>
 <body>
     <div id="CartaGasto">
@@ -28,16 +29,13 @@
                         <option value="C.E."></option>
                         <option value="P.A."></option>
                     </datalist>
-                </label>
-                <label class="documentoN" for="">
-                    <span></span>
                     <input class="documentoN-input" type="text" name="" id="InputDocumento" placeholder="identificacion">
                 </label>
             <section>
                 <h1 class="titulo2">DATOS DEL ACCIDENTE</h1>
                 <label class="fechaAccidente" for="">
                     <span></span>
-                    <input class="fechaAccidente-diaInput" type="number" name="dia" id="Inputdia" list="diaAT" placeholder="Día">
+                    <input class="fechaAccidente-diaInput" type="text" name="dia" id="Inputdia" list="diaAT" placeholder="Día">
                     <datalist id="diaAT">
                         <option value="01"></option>
                         <option value="03"></option>
@@ -70,7 +68,7 @@
                         <option value="30"></option>
                         <option value="31"></option>
                     </datalist>
-                    <input type="text" name="mes" id="InputMes" list="mesAT" placeholder="Mes">
+                    <input type="text" class="mesAccidente" name="mes" id="InputMes" list="mesAT" placeholder="Mes">
                     <datalist id="mesAT">
                         <option value="enero"></option>
                         <option value="febrero"></option>
@@ -85,7 +83,7 @@
                         <option value="noviembre"></option>
                         <option value="diciembre"></option>
                     </datalist>
-                    <input type="number" name="año" id="InputAnnio" list="annioAT" placeholder="Año">
+                    <input type="text" class="AnnioAccidente" name="año" id="InputAnnio" list="annioAT" placeholder="Año">
                     <datalist id="annioAT">
                         <option value="2015"></option>
                         <option value="2016"></option>
@@ -100,7 +98,7 @@
                 </label>
                 <label class="aseguradoraID" for="">
                     <span></span>
-                    <input type="text" name="" id="InputAsegurador" list="Asegurador" placeholder="Aseguradora SOAT">
+                    <input type="text" class="soat" name="" id="InputAsegurador" list="Asegurador" placeholder="Aseguradora SOAT">
                     <datalist id="Asegurador">
                         <option value="LIBERTY SEGUROS S.A"></option>
                         <option value="ADMINISTRADORA RECURSOS SGSSS (CONSORCIO SAYP)"></option>
@@ -118,7 +116,7 @@
                 </label>
                 <label class="gastoId" for="">
                     <span></span>
-                    <input type="text" name="" id="InputTotalGasto" placeholder="Total gasto">
+                    <input type="text" class="totalGasto" name="" id="InputTotalGasto" placeholder="Total gasto">
                 </label>
             </section>
             <section class="datosCarta">
@@ -126,12 +124,37 @@
                 <label class="fechaCarta" for="">
                     <span></span>
                     <input type="text" class="cartaDia" name="" id="InputCartaDia" list="diaAT" placeholder="Día">
-                    <input type="text" id="InputCartaMes" list="mesAT" placeholder="Mes">
-                    <input type="text" id="InputCartaAnnio" list="annioAT" placeholder="Año">
+                    <input type="text" class="cartaMes" id="InputCartaMes" list="mesAT" placeholder="Mes">
+                    <input type="text" class="annioCarta" id="InputCartaAnnio" list="annioAT" placeholder="Año">
+                </label>
+                <label class="tiNota" for="tipoNotaId">
+                    <span></span>
+                    <input type="text" name="" id="motivo-Input" list="motivoInput" placeholder="Motivo de carta">
+                    <datalist id="motivoInput">
+                        <option value="Cercania"></option>
+                        <option value="Disponibilidad"></option>
+                        <option value="Oportunidad"></option>
+                        <option value="Tope (ambulatorio)"></option>
+                        <option value="Tope (Hospitalario)"></option>
+                        <option value="Otra"></option>
+                        <option value="Tramites"></option>
+                    </datalist>
+                    <input type="text" class="nameServicio-Input" name="" id="inputServicio" placeholder="Servicio">
                 </label>
                 <label class="cartaId" for="">
                     <span></span>
-                    <input class="cartaId-input" type="text" name="" id="InputNota" placeholder="Nota de carta">
+                    <input class="cartaId-input" type="text" name="" id="InputNota" spellcheck="value" placeholder="Nota de carta">
+                </label>
+                <label class="funcionario" for="">
+                    <span></span>
+                    <input class="funcionario-input" type="text" name="" id="InputFuncionario" list="funcionaro-Input" placeholder="Nombre Funcionario">
+                    <datalist id="funcionaro-Input">
+                        <option value="Molly"></option>
+                        <option value="Fernando"></option>
+                        <option value="Catalina"></option>
+                        <option value="Carolina"></option>
+                        <option value="Daniel"></option>
+                    </datalist>
                 </label>
             </section>
         </form>
@@ -167,11 +190,13 @@
         <section class="main-input-carta"><P id="ResultadoCarta"></P>												
         </section>
         <section class="main-input-funcionario">
-            Daniel David Usuga							
-            <br> Tecnico administrativo en salud							
-            <br> Clinica Universitaria Bolivariana							
-            <br> daniel.usuga@upb.edu.co							
-            <br> Tel 4455900 ext. 1608 - 1609 - 1611							
+            <section class="input.funcionaro">
+                <p id="ResultadoEmpleado"></p>
+                <p id="ResultadoCargo"></p>	
+                <p>Clinica Universitaria Bolivariana</p>							
+                <p id="ResultadoCorreo"></p>					
+                <p>Tel 4455900 ext. 1608 - 1609 - 1611</p>
+            </section>							
         </section>
     </main>
     <footer>
@@ -182,5 +207,6 @@
         </section>
     </footer>
     <script src="./index.js"></script>
+    <script src="./usuario.js"></script>
 </body>
 </html>
