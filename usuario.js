@@ -1,31 +1,31 @@
 var empleados = [
     {nombre: "Ruth Molly Sepulveda Mejia",
-    cargo:"Tecnologo Administrativo en salud",
-    ips:"Clinica Universitaria Bolivariana",
+    cargo:"Tecnólogo Administrativo en salud",
+    ips:"Clínica Universitaria Bolivariana",
     correo:"ruth.sepulveda@upb.edu.co",
     contacto:"Tel 4455900 ext. 1608 - 1609 - 1611"
     },
     {nombre: "Luis Fernando Bohorquez Uribe",
-    cargo:"Tecnologo Administrativo en salud",
-    ips:"Clinica Universitaria Bolivariana",
+    cargo:"Tecnólogo Administrativo en salud",
+    ips:"Clínica Universitaria Bolivariana",
     correo:"luisf.bohorquez@upb.edu.co",
     contacto:"Tel 4455900 ext. 1608 - 1609 - 1611"
     },
     {nombre: "Catalina Martinez Betancur",
-    cargo:"Tecnologo Administrativo en salud",
-    ips:"Clinica Universitaria Bolivariana",
+    cargo:"Tecnólogo Administrativo en salud",
+    ips:"Clínica Universitaria Bolivariana",
     correo:"catalinam.martinez@upb.edu.co",
     contacto:"Tel 4455900 ext. 1608 - 1609 - 1611"
     },
-    {nombre: "Diana Carolina Lopez Aristizabal",
-    cargo:"Tecnologo Administrativo en salud",
-    ips:"Clinica Universitaria Bolivariana",
-    correo:"dianaca.lopez@upb.edu.co",
+    {nombre: "Silvia Elena Betancur Alvarez",
+    cargo:"Tecnólogo Administrativo en salud",
+    ips:"Clínica Universitaria Bolivariana",
+    correo:"silviae.betancur@upb.edu.co",
     contacto:"Tel 4455900 ext. 1608 - 1609 - 1611"
     },
     {nombre: "Daniel David Usuga",
-    cargo:"Tecnico Administrativo en salud",
-    ips:"Clinica Universitaria Bolivariana",
+    cargo:"Técnico Administrativo en salud",
+    ips:"Clínica Universitaria Bolivariana",
     correo:"daniel.usuga@upb.edu.co",
     contacto:"Tel 4455900 ext. 1608 - 1609 - 1611"
     },
@@ -71,14 +71,14 @@ console.log(empleadosFiltrados);
 var usuario1 ="Molly"
 var usuario2 ="Fernando"
 var usuario3 ="Catalina"
-var usuario4 ="Carolina"
+var usuario4 ="Silvia"
 var usuario5 ="Daniel"
 
 function mostrarNombreUsuario(usuario){
     var Molly = nombreEmpleados[0];
     var Fernando = nombreEmpleados[1];
     var Catalina = nombreEmpleados[2];
-    var Carolina = nombreEmpleados[3];
+    var Silvia = nombreEmpleados[3];
     var Daniel = nombreEmpleados[4];
 
     if(usuario === usuario1){
@@ -91,7 +91,7 @@ function mostrarNombreUsuario(usuario){
         return Catalina
     };
     if(usuario === usuario4){
-        return Carolina
+        return Silvia
     };
     if(usuario === usuario5){
         return Daniel
@@ -102,7 +102,7 @@ function mostrarNombreCargo(usuario){
     var Molly = nombreCargo[0];
     var Fernando = nombreCargo[1];
     var Catalina = nombreCargo[2];
-    var Carolina = nombreCargo[3];
+    var Silvia = nombreCargo[3];
     var Daniel = nombreCargo[4];
 
     if(usuario === usuario1){
@@ -115,7 +115,7 @@ function mostrarNombreCargo(usuario){
         return Catalina
     };
     if(usuario === usuario4){
-        return Carolina
+        return Silvia
     };
     if(usuario === usuario5){
         return Daniel
@@ -126,7 +126,7 @@ function mostrarNombreCorreo(usuario){
     var Molly = nombreCorreo[0];
     var Fernando = nombreCorreo[1];
     var Catalina = nombreCorreo[2];
-    var Carolina = nombreCorreo[3];
+    var Silvia = nombreCorreo[3];
     var Daniel = nombreCorreo[4];
 
     if(usuario === usuario1){
@@ -139,7 +139,7 @@ function mostrarNombreCorreo(usuario){
         return Catalina
     };
     if(usuario === usuario4){
-        return Carolina
+        return Silvia
     };
     if(usuario === usuario5){
         return Daniel
