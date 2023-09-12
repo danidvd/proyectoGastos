@@ -28,7 +28,7 @@ form {
 }
 
 .fechaAccidente .mesAccidente{
-    width: 14rem;
+    width: 6rem;
     height: auto;
 }
 
@@ -43,7 +43,7 @@ form {
 }
 
 .fechaCarta .cartaMes{
-    width: 14rem;
+    width: 6rem;
     height: auto;
 }
 
@@ -212,7 +212,7 @@ form .fechaCarta{
 
 #CartaGasto{
     width: 100%;
-    height: 50rem;
+    height: 80rem;
 }
 
 .cartaId {
@@ -253,6 +253,7 @@ footer {
     width: 100%;
     position: absolute;
     padding: 0;
+    top: inherit;
 }
 
 .funcionario .funcionario-input{
@@ -261,6 +262,28 @@ footer {
 }
 
 
+section .cartaDiaIngreso{
+    width: 6rem;
+    height: auto;
+}
+
+section .cartaMesIngreso{
+    width: 6rem;
+    height: auto;
+}
+
+section .annioCartaIngreso{
+    width: 8rem;
+    height: auto;
+}
+
+.fechaAccidenteIngreso strong{
+    margin: 1rem 3rem;
+}
+
+strong {
+    margin-right: 10px;
+}
 
 
 

@@ -14,12 +14,25 @@ function onclickSumarNombre(){
     var documentoPaciente = documentoPacienteInput.value;
     var documentoPacienteCompleto = formatoMexico(documentoPaciente);
 
-    // fecha accidente
+    // fecha accidente (FUNCION SI)
+
+    var ingresoDiaInput = document.getElementById("InputCartaDia2");
+    var ingresoDia = ingresoDiaInput.value;
+    
+    var ingresoMesInput = document.getElementById("InputCartaMes2");
+    var ingresoMes = ingresoMesInput.value;
+    var ingresoMesAccidente = mostrarNombreMes(ingresoMes);
+    
+    var ingresoAnnioInput = document.getElementById("InputCartaAnnio2");
+    var ingresoAnnio = ingresoAnnioInput.value;
+
+    // fecha ingreso a la institucion accidente
     var diaInput = document.getElementById("Inputdia");
     var dia = diaInput.value;
 
     var mesInput = document.getElementById("InputMes");
     var mes = mesInput.value;
+    var mesInputAccidente = mostrarNombreMes(mes)
 
     var annioInput = document.getElementById("InputAnnio");
     var annio = annioInput.value;
@@ -33,6 +46,12 @@ function onclickSumarNombre(){
     var gasto = gastoInput.value;
     var gastoTotal = formatoMexico(gasto);
 
+    // Gasto 2 tope partido
+
+    var gasto2Input = document.getElementById("InputTotalGastoDos");
+    var gasto2 = gasto2Input.value;
+    var gastoTotal2 = formatoMexico(gasto2);
+
     // nota u observacion
 
     var notaInput = document.getElementById("InputNota");
@@ -45,6 +64,7 @@ function onclickSumarNombre(){
 
     var cartaMesInput = document.getElementById("InputCartaMes");
     var cartaMes = cartaMesInput.value;
+    var cartaMesAccidente = mostrarNombreMes(cartaMes);
 
     var cartaAnnioInput = document.getElementById("InputCartaAnnio");
     var CartaAnnio = cartaAnnioInput.value;
@@ -64,18 +84,23 @@ function onclickSumarNombre(){
     var queMotivoCarta = mostrarMotivo(motivoCarta);
     var CualMotivoCarta = mostrarMotivoFinal(motivoCarta);
 
+    //Si ingreso es diferente a fecha accidente
+
+    //var Parrafo1Final = mostrarParrafo1(tope2);
+
     // Se Muestran los cambios en la carta Parrafo1
+
     var ResultadoNombre = document.getElementById("ResultadoNombre");
-    ResultadoNombre.innerText = NameUser  + " identificado con " + tipoIdentificacion + " " + documentoPacienteCompleto + " ingresó a esta institución tras sufrir un accidente de tránsito.";
+    ResultadoNombre.innerText = "Certifica que " + NameUser  + " identificado con " + tipoIdentificacion + " " + documentoPacienteCompleto + " ingresó a esta institución tras sufrir un accidente de tránsito, el día " + ingresoDia + " de "+ ingresoMesAccidente + " " +ingresoAnnio;
 
     var ResultadoAccidente = document.getElementById("ResultadoAccidente");
-    ResultadoAccidente.innerText = "Desde el momento del ingreso a la institución el día " + dia + " de " + mes + " " + annio + " ha generado gastos médicos a cargo de: " + asegurador;
+    ResultadoAccidente.innerText = "Desde el momento del ingreso a la institución el día " + dia + " de " + mesInputAccidente + " " + annio + " ha generado gastos médicos a cargo de: " + asegurador;
 
     var ResultadoGasto = document.getElementById("ResultadoGasto");
-    ResultadoGasto.innerText = "$ " + gastoTotal;
+    ResultadoGasto.innerText = "$ " + gastoTotal + " $ " + gastoTotal2;
 
     var ResultadoCarta = document.getElementById("ResultadoCarta");
-    ResultadoCarta.innerText = "Esta constancia se realiza a solicitud del usuario y se firma en la ciudad de Medellín a los " + cartaDia + " días del mes de " + cartaMes + " de " + CartaAnnio;
+    ResultadoCarta.innerText = "Esta constancia se realiza a solicitud del usuario y se firma en la ciudad de Medellín a los " + cartaDia + " días del mes de " + cartaMesAccidente + " de " + CartaAnnio;
 
     var ResultadoNota = document.getElementById("ResultadoNota");
     ResultadoNota.innerText = CualMotivoCarta;

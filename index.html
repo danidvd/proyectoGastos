@@ -34,8 +34,8 @@
             <section>
                 <h1 class="titulo2">DATOS DEL ACCIDENTE</h1>
                 <label class="fechaAccidente" for="">
-                    <span></span>
-                    <input class="fechaAccidente-diaInput" type="text" name="dia" id="Inputdia" list="diaAT" placeholder="Día">
+                    <span><strong>Fecha Accidente</strong></span>
+                    <input class="fechaAccidente-diaInput" type="text" maxlength="2" name="dia" id="Inputdia" list="diaAT" placeholder="Día">
                     <datalist id="diaAT">
                         <option value="01"></option>
                         <option value="03"></option>
@@ -68,22 +68,22 @@
                         <option value="30"></option>
                         <option value="31"></option>
                     </datalist>
-                    <input type="text" class="mesAccidente" name="mes" id="InputMes" list="mesAT" placeholder="Mes">
+                    <input type="text" class="mesAccidente" name="mes" maxlength="2" id="InputMes" list="mesAT" placeholder="Mes">
                     <datalist id="mesAT">
-                        <option value="enero"></option>
-                        <option value="febrero"></option>
-                        <option value="marzo"></option>
-                        <option value="abril"></option>
-                        <option value="mayo"></option>
-                        <option value="junio"></option>
-                        <option value="julio"></option>
-                        <option value="agosto"></option>
-                        <option value="septiembre"></option>
-                        <option value="octubre"></option>
-                        <option value="noviembre"></option>
-                        <option value="diciembre"></option>
+                        <option value="01"></option>
+                        <option value="02"></option>
+                        <option value="03"></option>
+                        <option value="04"></option>
+                        <option value="05"></option>
+                        <option value="06"></option>
+                        <option value="07"></option>
+                        <option value="08"></option>
+                        <option value="09"></option>
+                        <option value="10"></option>
+                        <option value="11"></option>
+                        <option value="12"></option>
                     </datalist>
-                    <input type="text" class="AnnioAccidente" name="año" id="InputAnnio" list="annioAT" placeholder="Año">
+                    <input type="text" class="AnnioAccidente" name="año" maxlength="4" id="InputAnnio" list="annioAT" placeholder="Año">
                     <datalist id="annioAT">
                         <option value="2015"></option>
                         <option value="2016"></option>
@@ -96,6 +96,9 @@
                         <option value="2023"></option>
                     </datalist>
                 </label>
+                    <span class="fechaAccidenteIngreso"><strong>La fecha de ingreso es diferente a la fecha del accidente</strong></span>
+                    <button class="btn" type="button" id="botonIngreso" onclick="mostrarFechaIngreso()">Si</button>
+                    <section class="container"></section>
                 <label class="aseguradoraID" for="">
                     <span></span>
                     <input type="text" class="soat" name="" id="InputAsegurador" list="Asegurador" placeholder="Aseguradora SOAT">
@@ -116,16 +119,19 @@
                 </label>
                 <label class="gastoId" for="">
                     <span></span>
-                    <input type="text" class="totalGasto" name="" id="InputTotalGasto" placeholder="Total gasto">
+                    <input type="text" class="totalGasto" name="" maxlength="8" id="InputTotalGasto" placeholder="Total gasto">
                 </label>
+                <span class="fechaAccidenteIngreso"><strong>Accidente tope ADRESS-SOAT cilindraje menor a 200cc</strong></span>
+                <button class="btn" type="button" id="botonTope" onclick="mostrarSegundoTope()">Si</button>
+                <section class="container2"></section>
             </section>
             <section class="datosCarta">
                 <h1>DATOS DE CARTA</h1>
                 <label class="fechaCarta" for="">
-                    <span></span>
-                    <input type="text" class="cartaDia" name="" id="InputCartaDia" list="diaAT" placeholder="Día">
-                    <input type="text" class="cartaMes" id="InputCartaMes" list="mesAT" placeholder="Mes">
-                    <input type="text" class="annioCarta" id="InputCartaAnnio" list="annioAT" placeholder="Año">
+                    <span><strong>Fecha de carta</strong></span>
+                    <input type="text" class="cartaDia" maxlength="2" name="" id="InputCartaDia" list="diaAT" placeholder="Día">
+                    <input type="text" class="cartaMes" id="InputCartaMes" maxlength="2" list="mesAT" placeholder="Mes">
+                    <input type="text" class="annioCarta" maxlength="4" id="InputCartaAnnio" list="annioAT" placeholder="Año">
                 </label>
                 <label class="tiNota" for="tipoNotaId">
                     <span></span>
@@ -152,7 +158,7 @@
                         <option value="Molly"></option>
                         <option value="Fernando"></option>
                         <option value="Catalina"></option>
-                        <option value="Carolina"></option>
+                        <option value="Silvia"></option>
                         <option value="Daniel"></option>
                     </datalist>
                 </label>
@@ -208,5 +214,7 @@
     </footer>
     <script src="./index.js"></script>
     <script src="./usuario.js"></script>
+    <script src="./mesAccidente.js"></script>
+    <script src="./funciones.js"></script>
 </body>
 </html>
